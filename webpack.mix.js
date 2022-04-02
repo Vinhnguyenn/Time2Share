@@ -16,4 +16,4 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 
-mix.browserSync('http://localhost:8001');
+mix.browserSync('http://localhost:8000');

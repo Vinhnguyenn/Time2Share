@@ -47,8 +47,12 @@ body {
 .nav-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 4rem;
+    justify-content: flex-start;
+    padding: 4.5rem 7rem;
+}
+
+.nav-wrapper ul {
+    margin-left: 5rem;
 }
 
 .nav-wrapper li {
@@ -67,17 +71,51 @@ body {
 }
 
 .nav-wrapper li a:hover {
-    color: #1D7DD4;
+    color: #25d64b;
+}
+
+.account-wrapper {
+    margin-left: auto;
+}
+
+.account-wrapper button {
+    width: 9rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+
+.loginBtn {
+    background: none;
+    color: #25d64b;
+}
+
+.registerBtn {
+    outline: 1px solid #25d64b;
+    background-color: #25d64b;
+    color: black;
+}
+
+.account-wrapper button:hover {
+    cursor: pointer;
 }
 
 .search-wrapper {
-    position: relative;
-    display: flex;
+    margin-left: 5rem;
 }
 
-.input-field input{
-    height: 2.5rem;
-    width: 20rem;
+.input-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.input-field input {
+    height: 3rem;
+    min-width: 30rem;
     border: none;
     border-radius: 5px;
     background-color: rgb(31, 31, 31);
@@ -86,4 +124,22 @@ body {
     font-weight: 500;
     letter-spacing: 0.5px;
     transition: all ease 0.2s;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+.input-field input[type=text] {
+    padding-left: 4rem;
+}
+
+.input-field .label-icon {
+    position: absolute;
+    margin-left: 0.6rem;
+}
+
+.input-field .label-icon i {
+    font-size: 2rem;
+    color: grey;
 }
