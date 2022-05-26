@@ -130,7 +130,7 @@ a:hover {
         <div class="logo-and-menu">
             <a href="/"><img class="logo" src="{{ asset('img/timetoshare.svg') }}" alt="Logo"></a>
             <ul>
-                <li><a href="/home">Products</a></li>
+                <li><a href="/dashboard">Products</a></li>
                 <li><a href="/products/create">Add products</a></li>
             </ul>
         </div>
