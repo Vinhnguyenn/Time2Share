@@ -9,7 +9,8 @@
     <!-- Link -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="icon" href="{{ asset('images/TabLogo.svg') }}">
+    <link rel="icon" href="{{ asset('img/favicon.png') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>

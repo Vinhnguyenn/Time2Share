@@ -1,36 +1,11 @@
 @extends('default')
 @section('title')   
-    Dashboard
+    TimeToShare
 @endsection('title')
 
 @section('content')
 
 <style>
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-
 *, *::before, *::after {
     padding: 0;
     margin: 0; 
@@ -54,13 +29,13 @@ body {
 
 .nav-wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 4.5rem 7rem;
+    padding: 2.5rem 7rem;
 }
 
 .nav-wrapper ul {
     margin-left: 5rem;
+    margin-top: 1rem;
 }
 
 .nav-wrapper li {
@@ -80,6 +55,18 @@ body {
 
 .nav-wrapper li a:hover {
     color: #25d64b;
+    cursor: pointer;
+}
+
+a {
+    transition: all ease 0.2s;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #25d64b;
+    cursor: pointer;
 }
 
 /* .account-wrapper {
@@ -124,6 +111,7 @@ body {
     float: right;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
 }
@@ -164,6 +152,7 @@ body {
 .input-field .label-icon i {
     font-size: 2rem;
     color: grey;
+    margin-top: 0.4rem;
 }
 </style>
 <script>
@@ -173,9 +162,9 @@ body {
     <nav>
         <div class="nav-wrapper">
             <div class="logo-and-menu">
-                <img class="logo" src="{{ asset('images/Logo.svg') }}" alt="Logo">
+                <a href="/"><img class="logo" src="{{ asset('img/timetoshare.svg') }}" alt="Logo"></a>
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/home">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -191,9 +180,7 @@ body {
                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                     <!-- <i class="material-icons">close</i> -->
                 </div>
-                <a href="#">
-                    <img class="user" src="{{ asset('images/User.svg') }}" alt="User">
-                </a>
+                <label class="label-icon user" for="search"><a href="/login" class="material-icons">person</a></label>
             </div>
         </div>  
     </nav>
