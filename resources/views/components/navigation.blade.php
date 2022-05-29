@@ -123,6 +123,26 @@ a:hover {
     text-align: center;
     align-items: center;
 }
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  margin-left: -2.3rem;
+}
+
+.menu:hover .menu-content {
+  display: flex;
+}
+
 </style>
 
 <nav>
@@ -137,9 +157,15 @@ a:hover {
         <div class="search-wrapper">
             <div class="input-field">
                 <input type="text" id="search" type="search" placeholder="Search for..">
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="label-icon material-icons">search</i>
             </div>
-            <label class="label-icon user" for="search"><a href="/dashboard" class="material-icons">person</a></label>
+            <div class="menu">
+                <a href="/dashboard" class="label-icon material-icons">person</a>
+                <div class="menu-content">
+                    <a href="/dashboard">Dashboard</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
         </div>
     </div>  
 </nav>

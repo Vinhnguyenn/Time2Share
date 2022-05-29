@@ -5,6 +5,10 @@
 
 @section('content')
 
+<style>
+    
+</style>
+
 <body>
     <div class="container">
         <div class="card-content">
