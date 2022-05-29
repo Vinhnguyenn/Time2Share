@@ -5,8 +5,6 @@
 
 @section('content')
 
-
-
 <body>
     <div class="container">
         <div class="card-content">

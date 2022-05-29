@@ -18,9 +18,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->middleware(['auth'])->name('dashboard');
+    Route::get('/dashboard', '\App\Http\Controllers\UsersController@show')->name('dashboard');
+    Route::get('/product/create', '\App\Http\Controllers\ProductsController@create')->name('product.create');
+    
     Route::get('/logout', '\App\Http\Controllers\LogoutController@perform')->name('logout.perform');
 });
 

@@ -60,19 +60,19 @@ form {
 }
 
 form input {
-    background: #121212;
+    background-color: #121212;
     border: 1px solid #3E3E3E;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 40rem;
+    width: 37rem;
     height: 3.5rem;
 }
 
 input[type=text],input[type=password] {
     font-size: 1.3rem;
     color: white;
-    margin-left: 5px;
     padding-left: 1rem;
+    background-color: #121212;
 }
 
 .email h1, .password h1 {
@@ -92,69 +92,30 @@ input[type=text],input[type=password] {
 
 .loginBtn {
     margin-top: 3rem;
-    width: 30rem;
+    width: 37rem;
     height: 3.1rem;
     border-radius: 5px;
     border: none;
-    color: black;
-    background-color: white;
+    color: white;
+    cursor: pointer;
+    background-color: #0C9C00;
     font-size: 1.8rem;
     font-weight: 500;
 }
 
 .registerBtn {
     margin-top: 1.2rem;
-    width: 30rem;
+    width: 37rem;
     height: 3.1rem;
     border-radius: 5px;
     border: 1px solid white;
     color: white;
+    cursor: pointer;
     background-color: transparent;
     font-size: 1.4rem;
     font-weight: 200;
 }
 
-/*
-.rememberForget {
-   display: flex;
-   width: 82vw;
-   align-items: center;
-   margin-top: 1rem;
-   font-size: 1.2rem;   
-}
-
-.rememberForget input{
-    height: 2rem;
-    width: 2rem;
-}
-
-.rememberForget label {
-    margin-left: 0.5rem;
-}
-
-.rememberForget p {
-    margin-left: auto;
-    text-decoration: none;
-    color: white;
-}
-
-.rememberForget a {
-    color: #0C9600;
-}
-
-.resetPswd {
-    width: 32rem;
-    text-align: right;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.rememberForgot {
-    width: 100%;
-    display: inline-block;
- } */
 </style>
 <script>
     
@@ -165,7 +126,8 @@ input[type=text],input[type=password] {
             <h1 class="text-gradient">TimetoShare</h1>
             <h2>Products of tomorrow</h2>
         </div>
-        <form>
+        <form class="login-form" method="POST" action="{{ route('login') }}">
+            @csrf
             <div class="input">
                 <div class="email">
                     <h1>E-Mail</h1>
@@ -176,12 +138,11 @@ input[type=text],input[type=password] {
                     <input type="password" name="password" id="password" placeholder="Vul hier je wachtwoord in">
                 </div>
             </div>
+            <div class="button-wrapper">
+                <button class="loginBtn">Inloggen</button>
+                <button class="registerBtn" href="/register">Maak een account aan</button>
+            </div>
         </form>
-
-        <div class="button-wrapper">
-            <button class="loginBtn">Inloggen</button>
-            <button class="registerBtn">Maak een account aan</button>
-        </div>
     </div>
 </body>
 

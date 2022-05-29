@@ -136,7 +136,7 @@ a:hover {
   position: absolute;
   font-size: 1.4rem;
   padding: 0.5rem;
-  margin-left: -2.3rem;
+  margin-left: -1.5rem;
 }
 
 .menu:hover .menu-content {
@@ -151,7 +151,7 @@ a:hover {
             <a href="/"><img class="logo" src="{{ asset('img/timetoshare.svg') }}" alt="Logo"></a>
             <ul>
                 <li><a href="/dashboard">Products</a></li>
-                <li><a href="/products/create">Add products</a></li>
+                <li><a href="/product/create">Add products</a></li>
             </ul>
         </div>
         <div class="search-wrapper">
@@ -162,7 +162,6 @@ a:hover {
             <div class="menu">
                 <a href="/dashboard" class="label-icon material-icons">person</a>
                 <div class="menu-content">
-                    <a href="/dashboard">Dashboard</a>
                     <a href="/logout">Logout</a>
                 </div>
             </div>
