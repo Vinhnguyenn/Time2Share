@@ -136,7 +136,7 @@ a:hover {
   position: absolute;
   font-size: 1.4rem;
   padding: 0.5rem;
-  margin-left: -1.5rem;
+  margin-left: -2.3rem;
 }
 
 .menu:hover .menu-content {
@@ -150,18 +150,19 @@ a:hover {
         <div class="logo-and-menu">
             <a href="/"><img class="logo" src="{{ asset('img/timetoshare.svg') }}" alt="Logo"></a>
             <ul>
-                <li><a href="/dashboard">Products</a></li>
+                <li><a href="/products">Products</a></li>
                 <li><a href="/product/create">Add products</a></li>
             </ul>
         </div>
         <div class="search-wrapper">
             <div class="input-field">
-                <input type="text" id="search" type="search" placeholder="Search for..">
+                <input onkeyup="searchFunction()" class="search-box" type="text" id="search" type="search" placeholder="Search for..">
                 <i class="label-icon material-icons">search</i>
             </div>
             <div class="menu">
                 <a href="/dashboard" class="label-icon material-icons">person</a>
                 <div class="menu-content">
+                    <a href="/dashboard">Dashboard</a>
                     <a href="/logout">Logout</a>
                 </div>
             </div>

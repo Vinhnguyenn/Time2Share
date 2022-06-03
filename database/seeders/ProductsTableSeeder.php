@@ -14,12 +14,6 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
-            'name' => 'Cellphone',
-            'owner_email' => "vinh@time2share.com",
-            'description' => 'Good working cellphone, take it or leave it.',
-            'image' => '/img/cellphone.jpg',
-            'category' => 'Electronics',
-        ]);
+        
     }
 }

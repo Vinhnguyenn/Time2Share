@@ -32,7 +32,6 @@ class ProductsController extends Controller
     }
 
     public function store(Request $request, Product $product){
-        // dd($request);
         $product->name = $request->input('name');
         $product->owner_email = $email = $request->user()['email'];
         $product->category = $request->input('category');
@@ -42,7 +41,7 @@ class ProductsController extends Controller
         
         try{
             $product->save();
-            return redirect('/redirect-create');
+            return redirect('/products/created-succesfully');
         } catch (Exception $e){
             return redirect('/users/create');
         } 
@@ -59,7 +58,7 @@ class ProductsController extends Controller
             'status' => 'Lend Out',
         ]);
 
-        return redirect('/redirect-lend');
+        return redirect('/lend');
     }
 
     public function updateReturn(Request $request, $id){
@@ -70,7 +69,7 @@ class ProductsController extends Controller
             'status' => 'Returning',
         ]);
 
-        return redirect('/redirect-return');
+        return redirect('/return');
     }
 
     public function updateReturnAccept(Request $request, $id){
@@ -82,6 +81,6 @@ class ProductsController extends Controller
             'status' => 'Available',
         ]);
 
-        return redirect('/redirect-accept');
+        return redirect('/accept');
     }
 }
